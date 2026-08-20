@@ -1,1 +1,35 @@
-"Radar de Mercado — ferramenta interna de monitoramento de mercado, desenvolvida em Python e hospedada via GitHub Actions + Cloudflare.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Radar de Mercado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{background:#0d1117;color:#c9d1d9;font-family:ui-monospace,Consolas,monospace;max-width:640px;margin:60px auto;padding:0 20px;line-height:1.6;}
+  h1{color:#e6edf3;font-size:22px;}
+  h2{color:#8b949e;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-top:32px;}
+  code{background:#161b22;padding:2px 6px;border-radius:4px;color:#79c0ff;}
+  ul{padding-left:20px;}
+  li{margin-bottom:4px;}
+</style>
+</head>
+<body>
+  <h1>Radar de Mercado</h1>
+  <p>A personal automated pipeline that collects, classifies, and summarizes publicly available financial market news on a schedule.</p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li><code>collect.py</code> pulls items from Google News RSS on a daily schedule</li>
+    <li>A classification step uses the DeepSeek API to categorize and deduplicate items</li>
+    <li>Results are committed back to the repository as JSON, giving the pipeline persistent history</li>
+    <li>A static dashboard (Chart.js) renders the data, deployed via Cloudflare Pages</li>
+    <li>Summaries go out by email through Resend</li>
+  </ul>
+
+  <h2>Stack</h2>
+  <p>Python &middot; GitHub Actions &middot; DeepSeek API &middot; Resend &middot; Cloudflare Pages &middot; Chart.js</p>
+
+  <h2>Status</h2>
+  <p>Actively running in production, orchestrated entirely through GitHub Actions.</p>
+</body>
+</html>
